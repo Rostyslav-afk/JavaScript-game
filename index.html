@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Game!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div>Левел: <span id="level">1</span></div>
+        <div>Монети: <span id="coins">5</span></div>
+        <button onclick="openShop()">🛒 Магазин</button>
+        <button onclick="startGame()">🎮 Зіграти ще раз</button>
+      </div>
+    
+      <div class="inventory">
+        <h3>🎒 Інвентар:</h3>
+        <ul id="inventoryList"></ul>
+      </div>
+    
+      <!-- Модалка -->
+      <div class="modal" id="shopModal">
+        <div class="modal-content">
+          <h2>Магазин</h2>
+          <div class="shop-item">
+            <span>🗡️ Меч (10 монет)</span>
+            <button onclick="buyItem('Меч', 10)">Купити</button>
+          </div>
+          <div class="shop-item">
+            <span>🍀 Lucky (15 монет)</span>
+            <button onclick="buyItem('Lucky', 15)">Купити</button>
+          </div>
+          <div class="shop-item">
+            <span>🛡️ Щит (20 монет)</span>
+            <button onclick="buyItem('Щит', 20)">Купити</button>
+          </div>
+          <button onclick="closeShop()">Закрити</button>
+        </div>
+      </div>
+
+<script src="./js/script.js"></script>
+</body>
+
+</html>
